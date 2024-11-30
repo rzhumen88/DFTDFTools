@@ -6,6 +6,8 @@ PWF (sound containers) can be extracted and builded except game.pwf, it glitches
 
 BIN (text container) can be extracted into two txt files, text and text keys and additional info from file. Can be builded now.
 
+CHARATTR.DEF (or other files with CBIN headers) can be decrypted, I don't know what exactly they're contains so I won't be doing encryption.
+
 MNU are just a text file, so you can open it with regular text editor in ANSI mode.
 
-CHARATTR.DEF (or other files with CBIN headers) can be decrypted, I don't know what exactly they're contains so I won't be doing encryption.
+PCX are 256-color images, I think you can convert it with other tools.
