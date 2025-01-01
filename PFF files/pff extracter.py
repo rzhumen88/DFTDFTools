@@ -11,6 +11,7 @@ def main():
         input("File does not exist")
         return 1
     deffolder = deffile.replace(".pff","")
+    deffolder = deffile.replace(".PFF","")
     if not os.path.isdir(deffolder):
         os.mkdir(deffolder)
     with open(deffile, "rb") as f:
