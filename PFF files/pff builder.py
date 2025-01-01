@@ -1,13 +1,11 @@
-
-
 import os
 
-def main():
+def main(deffile):
     filesOffset = 20
     pffFormat = 36
-    deffile = "small.pff"
     fileEnd = b'C0\xA8\x00\x03\x00\x00\x00\x00\x4B\x49\x4E\x47'
-    deffolder = deffile.replace(".pff","")
+    deffolder = deffile.replace(".PFF","")
+    deffile = deffile + ".PFF"
     if not os.path.isfile(deffolder+"/"+"FILEORDER") or not os.path.isfile(deffolder+"/"+"CRC"):
         input("Files FILEORDER or CRC cannot be found in the folder, archive cannot be created.")
         return 1
@@ -52,5 +50,8 @@ def main():
     print(f"Files imported: {counterFile}")
     
 if  __name__ == "__main__":
-    main()
+    folder = ''
+    while not os.path.isdir(folder):
+        folder = input('Enter path to pack into PFF file:  ')
+    main(folder)
     input("Done!")
